@@ -1,9 +1,15 @@
 import TodoList from "@/components/todo/TodoList";
 import { MongoClient } from "mongodb";
+import { useState } from "react";
 
 const HomePage = (props) => {
+
+  const [todos, setTodos] = useState(props.todos);
+  const deleteButton = (id) => {
+    setTodos(prevTodos => prevTodos.filter(todo => todo.id !== id));
+  };
   return (
-    <TodoList todos={props.todos}/>
+    <TodoList todos={todos} onDelete={deleteButton}/>
   );
 };
 

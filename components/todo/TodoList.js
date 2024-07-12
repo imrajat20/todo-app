@@ -1,7 +1,10 @@
 import classes from './todos.module.css';
 
 function TodoList(props) {
-    const buttonHandler = () => {};
+    const buttonHandler = (id) => {
+      props.onDelete(id);
+    };
+
     const checkboxHandler= async (id) => {
       const response = await fetch('/api/todo-status', {
           method: 'PUT',
@@ -23,7 +26,7 @@ function TodoList(props) {
                     />
                     <div className={classes.todoName}>{todo.name}</div>
                     <div className={classes.todoDescription}>{todo.description}</div>
-                    <button className={classes.deleteButton} onClick={buttonHandler}>Delete</button>
+                    <button className={classes.deleteButton} onClick={() => buttonHandler(todo.id)}>Delete</button>
                 </li>
             ))}
         </ul>
