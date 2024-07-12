@@ -10,13 +10,15 @@ function TodoForm(props) {
 
     const enteredName = nameInputRef.current.value;
     const enteredDescription = descriptionInputRef.current.value;
+    const status = 'incomplete';
 
-    const meetupData = {
+    const taskData = {
       name: enteredName,
       description: enteredDescription,
+      status: status
     };
 
-    props.onAddMeetup(meetupData);
+    props.onAddMeetup(taskData);
   }
 
   return (
