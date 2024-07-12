@@ -9,7 +9,7 @@ const MainHeader = () => {
           <nav className={classes.nav}>
             <ul>
               <li>
-                <Link href='/'>All Tasks</Link>
+                <Link href='/'>Completed Tasks</Link>
               </li>
               <li>
                 <Link href='/new-task'>Add New Task</Link>
