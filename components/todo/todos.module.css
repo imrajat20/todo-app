@@ -1,0 +1,42 @@
+/* todos.module.css */
+
+.todoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todoItem {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.todoName {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.todoDescription {
+  margin-bottom: 1rem;
+}
+
+.deleteButton {
+  align-self: flex-end;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: #ff4d4d;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.deleteButton:hover {
+  background-color: #e60000;
+}
